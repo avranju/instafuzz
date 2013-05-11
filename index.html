@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>InstaFuzz</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <div id="title">InstaFuzz</div>
+    </header>
+    <section id="container">
+        <canvas id="picture" width="650" height="565"></canvas>
+        <div id="controls">
+            <div id="filters-list"></div>
+            <button id="loadImage">Add</button>
+            <input type="file" id="fileUpload" style="display: none;" accept="image/gif, image/jpeg, image/png" />
+        </div>
+    </section>
+
+    <!-- Handlebar template for a filter UI button -->
+    <script id="filter-template" type="text/x-handlebars-template">
+        <div class="filter-container" data-filter-id="{{filterId}}">
+            <div class="filter-name">{{filterName}}</div>
+            <canvas class="filter-preview" width="128" height="128"></canvas>
+        </div>
+    </script>
+
+    <script src="js/lib/jquery-1.9.1.min.js"></script>
+    <script src="js/lib/handlebars.min.js"></script>
+    <script src="js/ns.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/filter-renderer.js"></script>
+    <script src="js/instafuzz.js"></script>
+</body>
+</html>
