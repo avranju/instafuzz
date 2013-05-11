@@ -81,7 +81,7 @@
             for (var y = 0; y < h; ++y) {
                 for (var x = 0; x < w; ++x) {
                     index = (x + y * imageData.width) * 4;
-                    var luminance = parseInt(data[index + 0] + data[index + 1] + data[index + 2] * 0.11) / 3;
+                    var luminance = parseInt(data[index + 0] + data[index + 1] + data[index + 2]) / 3;
                     data[index + 0] = data[index + 1] = data[index + 2] = luminance;
                 }
 
